@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanmay | Creative Website Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO SECTION */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#000428,#004e92);
+position:relative;
+}
+
+.hero h1{
+font-size:60px;
+font-family:'Orbitron',sans-serif;
+background:linear-gradient(90deg,#00ffff,#ff00ff,#00ffff);
+-webkit-background-clip:text;
+color:transparent;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 15px #00ffff;}
+to{text-shadow:0 0 40px #ff00ff;}
+}
+
+.typing{
+font-size:22px;
+margin-top:15px;
+color:#00ffff;
+}
+
+.scroll-btn{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-weight:600;
+cursor:pointer;
+font-size:16px;
+background:linear-gradient(45deg,#ff00cc,#3333ff);
+color:white;
+transition:0.4s;
+}
+
+.scroll-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px #ff00ff;
+}
+
+/* CREATIVE SERVICES SECTION */
+.services{
+padding:100px 20px;
+text-align:center;
+background:linear-gradient(-45deg,#ff512f,#dd2476,#1fa2ff,#12d8fa);
+background-size:400% 400%;
+animation:gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+padding:30px;
+margin:20px auto;
+max-width:500px;
+border-radius:20px;
+transition:0.5s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 40px white;
+}
+
+.price{
+margin-top:15px;
+font-size:20px;
+font-weight:bold;
+color:#fff;
+}
+
+/* CONTACT SECTION */
+.contact{
+padding:100px 20px;
+text-align:center;
+background:radial-gradient(circle at top left,#00c6ff,#0072ff,#1e3c72);
+}
+
+.buttons{
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+margin:10px;
+padding:15px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+background:white;
+color:black;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px white;
+}
+
+footer{
+background:#111;
+padding:20px;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<h1>👑 Tanmay</h1>
+<div class="typing" id="typing"></div>
+
+<button class="scroll-btn" onclick="document.getElementById('services').scrollIntoView();">
+View My Prices & Contact 🚀
+</button>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+<h2>💼 My Website Packages</h2>
+
+<div class="card">
+<h3>Normal Website</h3>
+<p>Clean, modern & professional website for students, shops & small businesses.</p>
+<div class="price">₹200 – ₹250</div>
+</div>
+
+<div class="card">
+<h3>Premium Creative Website</h3>
+<p>Very very nice website with amazing animated background, stylish design & full creativity 🔥</p>
+<div class="price">₹400 – ₹500</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+<h2>📞 Contact Me</h2>
+
+<div class="buttons">
+<a href="tel:9302312005" class="btn">📱 Call</a>
+<a href="https://instagram.com/A_website_developer" target="_blank" class="btn">📸 Instagram</a>
+<a href="https://wa.me/919302312005" target="_blank" class="btn">💬 WhatsApp</a>
+<a href="mailto:tp111222333111@gmail.com" class="btn">📧 Email</a>
+</div>
+</section>
+
+<footer>
+© 2026 Tanmay | Creative Developer 🚀
+</footer>
+
+<script>
+const text = "I create websites that will definitely make you happy 🚀";
+let i = 0;
+
+function typingEffect(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typingEffect,40);
+}
+}
+
+typingEffect();
+</script>
+
+</body>
+</html>
